@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>HTML L1 - Assignment 3</title>
+        <style>
+            *
+            {
+                text-align: center;
+                margin: 0;
+                padding: 0;
+            }
+            h1
+            {
+                padding: 15px;
+                font-size: 30px;
+                text-transform: uppercase;
+            }
+            video
+            {
+                border: 1px solid grey;
+            }
+            button
+            {
+                width: 100px;
+                height: 30px;
+                text-transform: capitalize;
+            }
+        </style>
+    </head>
+    <body>
+        <section>
+            <img src="./aow.png" alt="">
+            <h1>Awesome Online Videos</h1>
+        </section>
+        <section>
+            <video id="video">
+                <source src="./video.mp4" type="video/mp4">
+                Browser does not support video
+            </video>
+            <br>
+            <button onclick="play()">play</button>
+            <button onclick="pause()">Pause</button>
+        </section>
+        <script>
+            var video = document.getElementById('video');
+            function play()
+            {
+                video.play();
+            }
+            function pause()
+            {
+                video.pause();
+            }
+        </script>
+    </body>
+</html>

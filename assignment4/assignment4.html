@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Trend.NXT HTML5 :: L1 :: Assignment 4</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+            body {
+                text-align: center;                
+            } 
+            canvas
+            {
+                margin-top: 70px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Board of Control for Cricket in India</h1>
+        <h3>T20 Cricket Match - India Batting Statistics</h3>
+
+        <canvas id="graph" width="500" height="400">Your browser does not support the HTML5 canvas tag.</canvas>
+
+        <script>
+            var c = document.getElementById('graph');
+            var ctx = c.getContext('2d');
+
+            ctx.font = '15px Arial';
+            ctx.lineWidth = 1.5;            
+
+            ctx.beginPath();
+            ctx.moveTo(100,300);
+            ctx.lineTo(100,0);
+            ctx.moveTo(50,270);
+            ctx.lineTo(600,270);
+            ctx.strokeStyle = '#000000';
+            ctx.stroke();
+
+            // build out the numbers for both directions of the chart            
+            ctx.strokeText('200',50,20);
+            ctx.strokeText('160',50,70);
+            ctx.strokeText('120',50,120);
+            ctx.strokeText('80',58,170);
+            ctx.strokeText('40',58,220);
+
+            ctx.strokeText('0',66,295);
+            ctx.strokeText('5',166,295);
+            ctx.strokeText('10',261,295);
+            ctx.strokeText('15',362,295);
+            ctx.strokeText('20',461,295);
+
+            // axis lables
+            ctx.beginPath();
+            ctx.font = 'bold 11px Arial';
+            ctx.fillStyle = '#00000';
+            ctx.fillText('RUNS ',0,30);
+            ctx.fillText('OVERS',450,320);
+
+            // plot the points and draw the lines
+            ctx.beginPath();
+            ctx.strokeStyle = '#00000';
+            ctx.arc(176,215,2,0,2*Math.PI); // over 5 - runs 40
+            ctx.arc(271,175,2,0,2*Math.PI); // over 10 - runs 75
+            ctx.arc(360,90,2,0,2*Math.PI); // over 15 - runs 140            
+            ctx.stroke();
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>HTML L1 - Assignment 2</title>
+        <style>
+            *
+            {
+                padding: 0;
+                margin: 0;            
+            }
+            body
+            {
+                background: url(./background.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                overflow: hidden;
+            }
+            .form
+            {
+                position: absolute;
+                background:white;                
+                color: black;
+                width: 500px;
+                height: 485px;
+                top: 50%;
+                left: 50%;
+                padding: 20px;
+                border-radius: 10px;
+                transform: translate(-50%,-50%);
+            }
+            .title
+            {
+                background: #3ed5e89e;
+                padding: 5px;
+                height: 50px;;
+                text-transform: uppercase;
+            }
+            .title img
+            {
+                height: 60px;
+                vertical-align: middle;
+            }
+            .title span:not(:first-child)
+            {
+                font-size: xx-large;
+                line-height: 50px;                
+                vertical-align: middle;
+                color: #607D8B;
+                font-weight: bold;
+            }
+            .title span:first-child
+            {
+                font-size: x-large;
+                margin: 0 0px 0 15px;
+                vertical-align: middle;
+                color: white;
+            }
+            .form form
+            {
+                padding: 0 15px;
+            }
+            .form h1
+            {
+                text-align: center;
+                font-size: 30px;
+                padding:10px;
+            }
+            .form input
+            {
+                width: 95%;
+                height: 30px;
+                margin: 15px 0;
+                border:1px solid #5d5151c2;
+                padding: 5px;
+                border-radius: 5px;
+            }
+            .form label
+            {
+                padding:10px;
+
+            }
+            .form input[type='submit']
+            {
+                width:120px;
+                height: 40px;
+                margin-top:30px;
+                top:50%;
+                left:50%;
+                position: relative;
+                transform: translate(-50%,-50%);
+                border: none;
+                background-color: #607D8B;
+                color: white;
+                font-size: 15px;
+            }
+            .form input:focus
+            {
+                box-shadow: 0 4px 8px 0 #5ca9cc94, 0 6px 20px 0 #5ca9cc94;
+                outline: none;
+            }
+        </style>
+    </head>
+    <body>
+        <header class="title">
+            <img src="./logo.png">
+            <span>Xena</span><span>Events</span>
+        </header>
+        <div class="form">
+            <h1>Hot Air Ballon Event</h1>
+            <form>
+                <label for="name">Name</label><br>
+                <input type="text" name="name" id="name" required pattern="[a-z]" autofocus><br>
+                <label for="age">Age</label><br>
+                <input type="number" name="age" id="age" min="18" required><br>
+                <label for="email">Email</label><br>
+                <input type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required><br>
+                <label for="city">City</label><br>
+                <input type="text" list="demolist" name="city" id="city" required><br>
+                <datalist id="demolist">
+                    <option value="bangalore"></option>
+                    <option value="vizag"></option>
+                    <option value="rajkot"></option>
+                </datalist>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </body>
+</html>
